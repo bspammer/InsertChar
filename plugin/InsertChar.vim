@@ -181,7 +181,7 @@ function! InsertChar#insertAfter(count) " {{{
 
 		" we have inserted the text - set up the repeat plugin to repeat the
 		" inserted text
-		silent! call repeat#set('i' . l:inserted . "\<ESC>", -1)
+		silent! call repeat#set('a' . l:inserted . "\<ESC>", -1)
 	finally
 		" restore 'match'
 		if type(l:old_match) == type([]) && strlen(l:old_match[0]) && strlen(l:old_match[1])
